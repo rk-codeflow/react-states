@@ -1,22 +1,23 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+
 import "./App.css";
 
-const handleTitleChange = () => {
-  console.log("title");
-};
-
-const handleDateChange = () => {
-  console.log("date");
-};
-
-const handleAmountChange = () => {
-  console.log("amount");
-};
-
 function App() {
-  const [count, setCount] = useState(0);
+  const [title, setTitle] = useState("");
+  const [date, setDate] = useState("");
+  const [amount, setAmount] = useState("");
+
+  const handleTitleChange = (event: any) => {
+    setTitle(event.target.value);
+  };
+
+  const handleDateChange = (event: any) => {
+    setDate(event.target.value);
+  };
+
+  const handleAmountChange = (event: any) => {
+    setAmount(event.target.value);
+  };
 
   return (
     <form>
